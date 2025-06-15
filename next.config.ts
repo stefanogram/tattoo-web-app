@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
     allowedDevOrigins: [
       // This value is taken from the error log provided.
       // It might change if your Cloud Workstation URL changes.
-      'http://9000-firebase-studio-1749252437459.cluster-axf5tvtfjjfekvhwxwkkkzsk2y.cloudworkstations.dev'
+      'http://cluster-axf5tvtfjjfekvhwxwkkkzsk2y.cloudworkstations.dev'
     ]
   },
   experimental: {
