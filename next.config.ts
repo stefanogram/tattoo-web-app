@@ -1,4 +1,3 @@
-
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
@@ -31,7 +30,14 @@ const nextConfig: NextConfig = {
       // It might change if your Cloud Workstation URL changes.
       'http://9000-firebase-studio-1749252437459.cluster-axf5tvtfjjfekvhwxwkkkzsk2y.cloudworkstations.dev'
     ]
-  }
+  },
+  experimental: {
+    outputFileTracingExcludes: {
+      '*': [
+        '.next/cache/**',
+      ],
+    },
+  },
 };
 
 export default nextConfig;
