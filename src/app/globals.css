@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 40 90% 50%; /* Gold */
+    --primary-foreground: 40 50% 10%; /* Dark Brown */
+    --secondary: 220 13% 69%; /* Cool Gray */
+    --secondary-foreground: 220 9% 25%; /* Darker Cool Gray */
+    --muted: 220 10% 85%; /* Lighter Cool Gray */
+    --muted-foreground: 220 9% 45%; /* Medium Cool Gray */
+    --accent: 200 50% 45%; /* Muted Teal/Blue */
+    --accent-foreground: 200 100% 97%; /* Very Light Cyan */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 88%; /* Slightly lighter border */
+    --input: 220 13% 82%; /* Slightly darker input border for contrast */
+    --ring: 40 90% 50%; /* Primary color for ring (Gold) */
+    --radius: 0.5rem;
+
+    /* Sidebar specific theme variables */
+    --sidebar-background: 230 20% 12%; /* Dark Slate Blue/Charcoal */
+    --sidebar-foreground: 220 20% 90%; /* Light Gray for text */
+    --sidebar-primary: 40 90% 60%; /* Brighter Gold for sidebar */
+    --sidebar-primary-foreground: 40 50% 10%; /* Dark Brown */
+    --sidebar-accent: 200 50% 50%; /* Brighter Muted Teal/Blue for sidebar */
+    --sidebar-accent-foreground: 200 100% 97%; /* Very Light Cyan */
+    --sidebar-border: 230 15% 25%; /* Border for elements within sidebar */
+    --sidebar-ring: 40 90% 60%; /* Ring color for focus states in sidebar (Brighter Gold) */
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 40 90% 55%; /* Gold (Dark Mode) */
+    --primary-foreground: 40 50% 15%; /* Dark Brown (Dark Mode) */
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 200 50% 50%; /* Muted Teal/Blue (Dark Mode) */
+    --accent-foreground: 200 100% 97%; /* Very Light Cyan */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 40 90% 55%; /* Primary color for ring (Gold - Dark Mode) */
+
+    /* Dark Sidebar specific theme variables */
+    --sidebar-background: 224 71.4% 6%; /* Even darker for sidebar */
+    --sidebar-foreground: 210 20% 88%;
+    --sidebar-primary: 40 90% 62%; /* Brighter Gold (Dark Mode Sidebar) */
+    --sidebar-primary-foreground: 40 50% 12%; /* Dark Brown (Dark Mode Sidebar) */
+    --sidebar-accent: 200 50% 55%; /* Brighter Muted Teal/Blue (Dark Mode Sidebar) */
+    --sidebar-accent-foreground: 200 100% 97%; /* Very Light Cyan */
+    --sidebar-border: 224 71.4% 12%;
+    --sidebar-ring: 40 90% 62%; /* Ring color for focus states in sidebar (Brighter Gold Dark Mode) */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted) / 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.7);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Selection styles */
+::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
