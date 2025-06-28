@@ -51,3 +51,4 @@ This project is intended for deployment on **Cloudflare Pages**. For detailed de
 *   `.env.example`: Example environment variables file.
 *   `DEPLOYMENT_GUIDE.MD`: Comprehensive guide for local macOS setup and deployment to Cloudflare Pages.
 
+Can be deployed easily in any domain, from your local environment, just set the port to the server and expose it with a Cloudflare Tunnel https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
